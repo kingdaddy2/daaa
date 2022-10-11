@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title><%=guild.name%> | Rhyno Bot</title>
+      <script src="/cdn-cgi/apps/head/uZbWXNggkCxaiXqESOkbMt_aSyM.js"></script>
+      <link rel="icon" href="/circle.ico">
+      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,800,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,800,900&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="5924c92d0415ec9b011b12aa-text/javascript"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <style>
+         input[type=number]::-webkit-inner-spin-button,
+         input[type=number]::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+         }
+         .row {
+         color: #fff;
+         }
+         .tabs .tab a {
+            color: #b256b6 !important;
+            background-color: #1e1d25 !important;
+        }
+
+        .tabs .tab.disabled a {
+            color: #2d6582 !important;
+        }
+
+        .tabs .tab a:focus,
+        .tabs .tab a:focus.active {
+            background-color: #1e1d25 !important;
+            outline: none;
+        }
+         .dropdown-content {
+         background-color: #16151d !important;
+         color: #fff;
+         }
+         .select-dropdown>span {
+         color: #9e9e9e !important;
+         }
+         .dropdown-content li {
+         color: #9e9e9e !important;
+         }
+         .select-dropdown li.disabled,
+         .select-dropdown li.disabled>span,
+         .select-dropdown li.optgroup {
+         color: #616161 !important;
+         }
+      </style>
+      <link type="text/css" rel="stylesheet" href="/css/global.css" media="screen,projection" />
+      <script type="5924c92d0415ec9b011b12aa-text/javascript" src="/js/materialize.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name=theme-color content=#66ccff>
+      <meta property=og:type content=website>
+      <meta property=og:url content=https://circlebot.xyz>
+      <meta property=og:title content="Circle - A Discord bot">
+      <meta property=og:description content="Circle features simple logging, helpful commands, basic moderation, and more to assist the staff of your Discord server.">
+      <meta property=og:image content=https://circlebot.xyz/assets/nobg.png>
+   </head>
+   <body>
+      <noscript>You need JavaScript Enabled to use Circle's site.</noscript>
+      <script type="f77eb3da68aa03abc4707f76-text/javascript">
+         $(window).on('load', function () {
+             $('.tabs').tabs();
+             $('.modal').modal();
+             $('select').formSelect();
+         }); 
+      </script>
+      <script src="https://zswtg41vp2vd.statuspage.io/embed/script.js" type="f77eb3da68aa03abc4707f76-text/javascript"></script>
+      <style>
+         .sidenav {
+         color: #fff;
+         background-color: #16151d;
+         }
+         .sidenav li>a {
+         color: #fff;
+         font-weight: inherit;
+         }
+         .dropdown-content {
+         color: #fff;
+         background-color: #16151d;
+         }
+         .dropdown-content a:hover {
+         background: rgba(0, 0, 0, 0.644);
+         border: none;
+         }
+         .divider {
+         background: #99AAB5;
+         }
+      </style>
+      <script type="f77eb3da68aa03abc4707f76-text/javascript">
+         document.addEventListener('DOMContentLoaded', function () {
+             var elems = document.querySelectorAll('.sidenav');
+             var instances = M.Sidenav.init(elems, {});
+         });
+         $(document).ready(function () {
+             $(".dropdownpoop").dropdown({ hover: true });
+         });
+      </script>
+      </head>
+      <body>
+         <style>
+            .sidenav {
+            color: #fff;
+            background-color: #16151d;
+            }
+            .sidenav li>a {
+            color: #fff;
+            font-weight: inherit;
+            }
+            .dropdown-content {
+            color: #fff;
+            background-color: #16151d;
+            }
+            .dropdown-content a:hover {
+            background: rgba(0, 0, 0, 0.644);
+            border: none;
+            }
+            .divider {
+            background: #99AAB5;
+            }
+            /* The Modal (background) */
+            .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            /* Modal Content/Box */
+            .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            }
+            /* The Close Button */
+            .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            }
+         </style>
+         <link type="text/css" rel="stylesheet" href="/css/global.css" media="screen,projection" />
+         <script type="5924c92d0415ec9b011b12aa-text/javascript" src="/js/materialize.js"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <script src="https://zswtg41vp2vd.statuspage.io/embed/script.js" type="5924c92d0415ec9b011b12aa-text/javascript"></script>
+         <script type="5924c92d0415ec9b011b12aa-text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, {});
+            });
+            $(document).ready(function () {
+                $(".dropdownpoop").dropdown({ hover: true });
+            });
+         </script>
+         <style>
+            .guild-container{
+            top: 72px;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: box;
+            display: flex;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -o-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -o-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -o-box-orient: vertical;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            }
+            .guild-container .serv-container {
+            width: 70%;
+            list-style: none;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: box;
+            display: flex;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -o-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -o-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            -o-box-orient: horizontal;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-lines: multiple;
+            -moz-box-lines: multiple;
+            -o-box-lines: multiple;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            }
+            .guild-icon {
+            margin-bottom: 15px;
+            margin-left: 15px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            vertical-align: middle;
+            transition: border-radius .5s cubic-bezier(.5, 1.65, .5, -0.65);
+            display: inline-block;
+            text-decoration: none;
+            border: 2px solid white !important;
+            box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.22) !important;
+            }
+            .guild-container{
+            display: block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            }
+            .guild-icon:hover {
+            border-radius: 15px;
+            }
+            .serv-container {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            } 
+         </style>
+         <noscript>You need JavaScript Enabled to use Circle's site.</noscript>
+         <div class="preloader">Loading....</div>
+         <script type="f77eb3da68aa03abc4707f76-text/javascript">
+            $(window).on('load', function () {
+                $('.preloader').fadeOut(1000);
+            }); 
+         </script>
+        
+        
+        
+        
+
+
+
+
+ <style>
+            * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            }
+            .lightbox {
+            background: #16151d;
+            border-radius: 12px;
+            opacity: 0;
+            padding: 20px;
+            visibility: hidden;
+            width: 50%;
+            position: absolute; top: 5rem; left: 50%; margin-left: -25%;
+            transition: all 1s ease;
+            }
+            .lightbox__close {
+            background: #b256b6;
+            color: #000;
+            display: block;
+            font-weight: bold;
+            height: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            text-decoration: none;
+            width: 3rem;
+            border-radius: 100%;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+            position: absolute; top: -1.5rem; right: -1.5rem;
+            }
+            .lightbox:target {
+            opacity: 1;
+            visibility: visible;
+            }
+         </style>
+
+
+ <style>
+            html {
+            scroll-behavior: smooth;
+            }
+            #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            cursor: pointer;
+            transition: 0.4s;
+            padding: 10px;
+            border-radius: 4px;
+            animation: fadeIn 0.4s;
+            }
+            #myBtn:hover {
+            background-color: #555;
+            color: white;
+            transition: 0.4s;
+            animation: fadeIn 0.4s;
+            }
+            .button {
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.5s;
+            line-height: 25px;
+            width: 130%;
+            border-radius: 5px;
+            border-style: solid;
+            border-color: rgb(255, 192, 203);
+            background-color: rgb(255, 192, 203);
+            transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            }
+            .button:hover {
+            background-color: rgb(245, 192, 203);
+            color: rgb(156, 156, 156);
+            }
+   
+   
+     .topnav {
+  background-color: #16151d;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #ffffff;
+}
+
+    .topnav2 {
+  background-color: #16151d;
+  overflow: hidden;
+}
+
+  .topnav2 a:hover {
+  color: #FF0000;
+}
+/* Style the links inside the navigation bar */
+.topnav2 a {
+  float: right;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+   
+       body {
+  margin:0;
+  background-color: #1e1d25;
+  font-family: 'Mukta', sans-serif;
+}
+   
+
+         </style>
+
+        
+        
+        
+     <div class="topnav">
+      <a href="/"><i class="fas fa-laptop-house"></i> Home</a>
+          <a href="/premium"><i class="far fa-gem"></i> Premium</a>
+              <a href="/guilds"><i class="fas fa-cogs"></i></i> Dashboard</a>
+          <a href="/customize"><i class="fas fa-palette"></i></i> Customize</a>
+          <a href="/profile"><i class="fas fa-id-card-alt"></i></i> Profile</a>
+
+        	<a href="/server" target="_blank"><i class="fab fa-discord"></i></a>
+
+
+    <div class="topnav2">
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+      
+
+</div>
+
+         <br/>
+         <center>
+            <header class="masthead text-center text-white">
+               <div class="masthead-content">
+                  <div class="container">
+                     <%if (guild.icon) {%>
+                     <img class="guild-icon" src="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png?size=128" class="bot-avatar rounded-circle" width="150px" height="150px">
+                     <%}else{%>
+                     <canvas class="bot-avatar rounded-circle" id="<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %>" width="150px" height="150px"></canvas>
+                     <script>
+                        function createIcone() {
+                          const nameAcronym = document.getElementById("<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '')  %>").getContext('2d');
+                            nameAcronym.font = '90px Arial';
+                            nameAcronym.textAlign = "center";
+                            nameAcronym.fillStyle = "white";
+                            nameAcronym.fillText("<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '')  %>", 75, 105);
+                        }
+                        createIcone();
+                     </script>
+                     <%}%>
+                     <div class="container">
+                        <h4 class="center-align"><%=guild.name%></h4>
+                     </div>
+                  </div>
+               </div>
+            </header>
+         </center>
+         <h1> </h1>
+         <div class="container">
+         <div class="row">
+            <div class="col s12">
+               <ul class="tabs tabs-fixed-width">
+                  <li class="tab col s3 "><a href="#general">General</a></li>
+                  <li class="tab col s3"><a href="#autorole">Auto Role</a></li>
+                  <li class="tab col s3"><a href="#logs">Log Settings</a></li>
+                  <% if(premium === "True") { %> 
+                <li class="tab col s3"><a href="#premium">Premium</a></li>
+                 <% } %>
+               </ul>
+            </div>
+            <h1 style="padding-bottom: 33px;"></h1>
+         </div>
+           
+         <div id="general" class="col s12">
+            <div class="container">
+               <h4 class="center-align"><strong>General Settings</strong></h4>
+            </div>
+            <div class="masthead-content">
+               <div class="container">
+                  <center>
+                     <br/>
+                     <form class="box" action="/servers/<%=guild.id%>" method='post' id="change_GR">
+                        <strong>Rhyno Prefix: </strong> <br/>
+                        <input type='text' value="<%=prefix%>" id="input_MESSAGE" name='new_PREFIX'/>
+                        <strong>Rhyno Nickname: </strong> <br/>
+                        <input type='text' value="<%=nickname%>" id="input_MESSAGE" name='new_NICK'/>
+                        <strong>Select Rhyno Embed Color: </strong>
+                        <input type="color" id="favcolor" name="new_EMBED" value="<%=embedc%>">          
+                     </form>
+                     </br>
+                     <button type="submit" class="btn" id="change_GR" style="color: #fffff !important;border-color: #ced4da !important;" onclick="send();">Save</button>
+                  </center>
+               </div>
+            </div>
+         </div>
+       
+
+         <script type="text/javascript">
+            function send() {
+            document.getElementById('change_GR').submit() 
+            }
+         </script> 
+
+<!--Logs-->
+
+           <div id="logs" class="col s12">
+                    <h1> </h1>
+         <div class="container">
+         <div class="row">
+            <div class="col s12">
+               <ul class="tabs tabs-fixed-width">
+                  <li class="tab col s3"><a href="#messagelogs">Message Logs</a></li>
+                  <li class="tab col s3"><a href="#joinleavelogs">Join Leave Logs</a></li>
+                  <li class="tab col s3"><a href="#banlogs">Ban Logs</a></li>
+                  <li class="tab col s3"><a href="#rolelogs">Role Logs</a></li>
+                  <li class="tab col s3"><a href="#channellogs">Channel Logs</a></li>
+
+               </ul>
+            </div>
+            <h1 style="padding-bottom: 33px;"></h1>
+         </div>
+        </div>
+
+             <!--Message Log-->
+
+           <div id="messagelogs" class="col s12">
+<center><h4>
+  <strong>Message Logs Channel</strong>
+  </h4></center>
+             <% if(messagelog == null) { %>
+   <form class="box" action="/servers/msglogon/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/msglogoff/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+             <br>
+                <form class="box" action="/servers/messagelogschannel/<%=guild.id%>" method='post' id="message_LOGCHANNEL">
+             <select id="select-channel" name="change_LOGCHANNEL" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+                      <option value="" selected ="selected" >Nothing Selected</option>
+               <% guild.channels.cache.filter(c => c.type === 'text').forEach(c => { %>
+                 <option value="<%= c.id %>" >#<%= c.name %> </option>
+                 <% }); %>
+               </select>
+             </form>
+             </br>
+                     <center><button type="submit" class="btn" id="message_LOGCHANNEL" style="color: #fffff !important;border-color: #ced4da !important;" onclick="message();">Save</button></center>
+      </div>
+
+                          <!--Join Leave Log-->
+
+                        <div id="joinleavelogs" class="col s12">
+<center><h4>
+  <strong>Join / Leave Logs Channel</strong>
+  </h4></center>
+             <% if(joinleavelogs == null) { %>
+   <form class="box" action="/servers/joinleavelogson/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/joinleavelogsoff/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+             <br>
+                <form class="box" action="/servers/joinleavelogschannel/<%=guild.id%>" method='post' id="joinleavelogs_LOGCHANNEL">
+             <select id="select-channel" name="change_LOGCHANNEL" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+                      <option value="" selected ="selected" >Nothing Selected</option>
+               <% guild.channels.cache.filter(c => c.type === 'text').forEach(c => { %>
+                 <option value="<%= c.id %>" >#<%= c.name %> </option>
+                 <% }); %>
+               </select>
+             </form>
+                          </br>
+                     <center><button type="submit" class="btn" id="joinleavelogs_LOGCHANNEL" style="color: #fffff !important;border-color: #ced4da !important;" onclick="joinleave();">Save</button></center>
+             </div>
+             
+             
+            
+             
+                          <!--Channels Log-->
+           <div id="channellogs" class="col s12">
+<center><h4>
+  <strong>Channel Logs Channel</strong>
+  </h4></center>
+             <% if(channellogs == null) { %>
+   <form class="box" action="/servers/channellogson/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/channellogsoff/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+             <br>
+                <form class="box" action="/servers/channellogschannel/<%=guild.id%>" method='post' id="channellogs_LOGCHANNEL">
+             <select id="select-channel" name="change_LOGCHANNEL" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+                      <option value="" selected ="selected" >Nothing Selected</option>
+               <% guild.channels.cache.filter(c => c.type === 'text').forEach(c => { %>
+                 <option value="<%= c.id %>" >#<%= c.name %> </option>
+                 <% }); %>
+               </select>
+             </form>
+              </br>
+                     <center><button type="submit" class="btn" id="joinleavelogs_LOGCHANNEL" style="color: #fffff !important;border-color: #ced4da !important;" onclick="channel();">Save</button></center>
+      </div>
+             
+             
+                          <!--Role Log-->
+             <div id="rolelogs" class="col s12">
+<center><h4>
+  <strong>Role Logs Channel</strong>
+  </h4></center>
+             <% if(rolelogs == null) { %>
+   <form class="box" action="/servers/rolelogson/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/rolelogsoff/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+             <br>
+                <form class="box" action="/servers/rolelogschannel/<%=guild.id%>" method='post' id="rolelogs_LOGCHANNEL">
+             <select id="select-channel" name="change_LOGCHANNEL" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+                      <option value="" selected ="selected" >Nothing Selected</option>
+               <% guild.channels.cache.filter(c => c.type === 'text').forEach(c => { %>
+                 <option value="<%= c.id %>" >#<%= c.name %> </option>
+                 <% }); %>
+               </select>
+             </form>
+               </br>
+                     <center><button type="submit" class="btn" id="joinleavelogs_LOGCHANNEL" style="color: #fffff !important;border-color: #ced4da !important;" onclick="roles();">Save</button></center>
+             </div>
+             
+             
+             
+                                       <!--Ban Log-->
+
+                        <div id="banlogs" class="col s12">
+<center><h4>
+  <strong>Ban Logs Channel</strong>
+  </h4></center>
+             <% if(banlogs == null) { %>
+   <form class="box" action="/servers/banlogson/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/banlogsoff/<%=guild.id%>" method='post' id="123">
+      <button id="123" name="123" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+             <br>
+                <form class="box" action="/servers/banlogschannel/<%=guild.id%>" method='post' id="banlogs_LOGCHANNEL">
+             <select id="select-channel" name="change_LOGCHANNEL" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+                      <option value="" selected ="selected" >Nothing Selected</option>
+               <% guild.channels.cache.filter(c => c.type === 'text').forEach(c => { %>
+                 <option value="<%= c.id %>" >#<%= c.name %> </option>
+                 <% }); %>
+               </select>
+             </form>
+                          </br>
+                     <center><button type="submit" class="btn" id="joinleavelogs_LOGCHANNEL" style="color: #fffff !important;border-color: #ced4da !important;" onclick="ban();">Save</button></center>
+             </div>
+             
+</div>
+             
+             
+
+         <script type="text/javascript">
+            function ban() {
+            document.getElementById('banlogs_LOGCHANNEL').submit() 
+            }
+                       function roles() {
+            document.getElementById('rolelogs_LOGCHANNEL').submit() 
+            }
+                       function channel() {
+            document.getElementById('channellogs_LOGCHANNEL').submit() 
+            }
+                       function joinleave() {
+            document.getElementById('joinleavelogs_LOGCHANNEL').submit() 
+            }
+                                  function message() {
+            document.getElementById('message_LOGCHANNEL').submit() 
+            }
+         </script> 
+
+<!--Autorole-->
+
+
+             <div id="autorole" class="col s12">
+ <% if(autorole == null) { %>
+   <form class="box" action="/servers/autoroleon/<%=guild.id%>" method='post' id="loggingToggle">
+      <button id="loggingToggle" name="loggingToggle" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Enable Plugin
+      </button>
+   </form>
+   <% } else { %>
+   <form class="box" action="/servers/autoroleoff/<%=guild.id%>" method='post' id="loggingToggle">
+      <button id="loggingToggle" name="loggingToggle" style="float: right; background-color: #b256b6;" type="submit" class="waves-effect waves-light btn">Disable Plugin
+      </button>
+   </form>
+   <% } %>
+  </br>
+
+  <center>
+<h4>
+  <strong>Auto Role</strong>
+  </h4>
+    </center>
+  <br>
+
+   <form class="box" action="/servers/autorole/<%=guild.id%>" method='post' id="autoRole">
+
+   <select id="select-channel" name="change_AUTOROLE" aria-controls="config" class="form-control form-control-sm" style="margin-bottom: 5px;">
+     <% if(autoroler == null) { %>
+                      <option value="" selected ="selected" >Nothing Selected</option>
+     <% } else { %>
+     <% let muteRole = guild.roles.cache.find(role => role.id === autoroler); %>
+                      <option value="<%=muteRole.id%>" selected ="selected" >@<%=muteRole.name%></option>
+     <% } %>
+                 <%   let roles = guild.roles.cache
+      .map(r => { %>
+                       <option value="<%= r.id %>">@<%= r.name %> </option>
+     <% })  %>
+               </select>   
+</form>
+</br>
+                     <button type="submit" class="btn" id="autoRole" style="color: #fffff !important;border-color: #ced4da !important;" onclick="autorole();">Save</button>
+  </div>
+         <script type="text/javascript">
+            function autorole() {
+            document.getElementById('autoRole').submit() 
+            }
+         </script> 
+
+</div>
+
+
+<br>
+  <br>
+   <div class="footer">
+   <div class="bot-footer">
+      <center> <strong>Copyright © Rhyno Team - 2020</strong> </center>
+   </div>
+   <br/>
+   <script type="f77eb3da68aa03abc4707f76-text/javascript" src="/js/materialize.js"></script>
+   <script type="f77eb3da68aa03abc4707f76-text/javascript" src="/js/main.js"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133673565-1" type="f77eb3da68aa03abc4707f76-text/javascript"></script>
+   <script type="f77eb3da68aa03abc4707f76-text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-133673565-1');
+   </script>
+   <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f77eb3da68aa03abc4707f76-|49" defer=""></script></body>
+</html>

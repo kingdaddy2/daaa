@@ -1,0 +1,376 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/a2b9a7be17.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>| Ryhno Bot</title>
+  <link rel="icon" href="https://cdn.discordapp.com/emojis/749075115093917706.png?v=1">
+
+</head>
+<style>
+    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+  ::-webkit-scrollbar {
+	width: 5px
+}
+
+::-webkit-scrollbar-track {
+	background: inherit
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555
+}
+
+
+  body {
+  margin:0;
+  background-color: #1e1d25;
+  font-family: 'Mukta', sans-serif;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: #16151d;
+  color:white;
+}
+
+
+
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background: #1e1d25;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:38px;
+    background-color: black;
+  color: white;
+  }
+}
+a{
+	text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+ * {
+	 box-sizing: border-box;
+}
+ *::before, *::after {
+	 box-sizing: border-box;
+}
+
+ button {
+	 position: relative;
+	 display: inline-block;
+	 cursor: pointer;
+	 outline: none;
+	 border: 0;
+	 vertical-align: middle;
+	 text-decoration: none;
+	 background: transparent;
+	 padding: 0;
+	 font-size: inherit;
+	 font-family: inherit;
+}
+ button.learn-more {
+	 width: 12rem;
+	 height: auto;
+}
+ button.learn-more .circle {
+	 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	 position: relative;
+	 display: block;
+	 margin: 0;
+	 width: 3rem;
+	 height: 3rem;
+	 background: #1e1d25;
+	 border-radius: 1.625rem;
+}
+ button.learn-more .circle .icon {
+	 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+	 margin: auto;
+	 background: #fff;
+}
+ button.learn-more .circle .icon.arrow {
+	 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	 left: 0.625rem;
+	 width: 1.125rem;
+	 height: 0.125rem;
+	 background: none;
+}
+ button.learn-more .circle .icon.arrow::before {
+	 position: absolute;
+	 content: '';
+	 top: -0.25rem;
+	 right: 0.0625rem;
+	 width: 0.625rem;
+	 height: 0.625rem;
+	 border-top: 0.125rem solid #fff;
+	 border-right: 0.125rem solid #fff;
+	 transform: rotate(45deg);
+}
+ button.learn-more .button-text {
+	 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 padding: 0.75rem 0;
+	 margin: 0 0 0 1.85rem;
+	 color: #444444;
+	 font-weight: 700;
+	 line-height: 1.6;
+	 text-align: center;
+	 text-transform: uppercase;
+}
+ button:hover .circle {
+	 width: 100%;
+}
+ button:hover .circle .icon.arrow {
+	 background: #fff;
+	 transform: translate(1rem, 0);
+}
+ button:hover .button-text {
+	 color: #fff;
+}
+  
+  
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #16151d;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #ffffff;
+}
+  
+  
+  .topnav2 {
+  background-color: #16151d;
+  overflow: hidden;
+}
+
+  .topnav2 a:hover {
+  color: #FF0000;
+}
+/* Style the links inside the navigation bar */
+.topnav2 a {
+  float: right;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+    .topnav3 {
+  background-color: #16151d;
+  overflow: hidden;
+}
+
+  .topnav3 a:hover {
+  color: #00FF00;
+}
+/* Style the links inside the navigation bar */
+.topnav3 a {
+  float: right;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+
+.preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-repeat: no-repeat;
+	background-color: #16151d;
+	background-position: center
+}
+  
+/* Add a color to the active/current link */
+</style>
+<body>
+   <div class="preloader"></div>
+
+         <script>
+          $(window).on('load', function () {
+                     $('.preloader').fadeOut(1900);
+                 }); 
+  </script>
+  <div class="header">
+    <br>
+      
+  <div class="topnav">
+      <a href="/"><i class="fas fa-laptop-house"></i> Home</a>
+          <a href="/premium"><i class="far fa-gem"></i> Premium</a>
+            <%if(login == 'yes') { %>
+              <a href="/guilds"><i class="fas fa-cogs"></i></i> Dashboard</a>
+          <a href="/customize"><i class="fas fa-palette"></i></i> Customize</a>
+          <a href="/profile"><i class="fas fa-id-card-alt"></i></i> Profile</a>
+
+<% } %>
+        	<a href="/server" target="_blank"><i class="fab fa-discord"></i></a>
+
+        <%if(login == 'yes') { %>
+
+    <div class="topnav2">
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+      <% } else { %>
+  <% if(login == 'no') { %>
+     <div class="topnav3">
+            <a href="/login"><i class="fas fa-sign-out-alt"></i>Login</a>
+    </div>
+  
+  <% } %>
+      
+      <% } %>
+
+</div>
+    <div class="inner-header flex">
+    
+    <path fill="#FFFFFF" stroke="#1e1d25" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+    <g><path fill="#fff"
+    d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+    C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+    c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+    </g>
+    </svg>
+        <center><img class="center" src="https://cdn.discordapp.com/emojis/749075115093917706.png?v=1"></center>
+    <h1><bold>Rhyno Bot<br />A Multi Purpose Bot.</bold></h1>
+      <button class="learn-more" onclick="window.location.href='<%= login === 'yes' ? '/profile': '/login' %>';">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text"><%=status%></span>
+      </button>
+  </div>
+        <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(30,29,37,1)" />
+    </g>
+    </svg>
+    </div>
+</body>
+</html>
